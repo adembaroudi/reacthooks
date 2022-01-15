@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import './App.css';
+ import MovieList from './Component/MovieList';
+ import AddMovie from './Component/AddMovie';
+ import MoviesData from './Component/MoviesData';
+ import React, {useState , useEffect} from 'react';
+ import { 
+  Route,Routes,
+  Link} from 'react-router-dom';
+  import Trailer from './Component/trailer';
+ 
+
+         
+const App = ({})=> {
+  const [movies, setMovies]= useState( MoviesData)
+  
+  const [newMovie, setNewMovie]=useState({})
+useEffect(() => {
+  setMovies([...movies,newMovie])
+ 
+}, [newMovie])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div className=" container App ">
+
+   <div className='App'>    
+   <Routes>
+
+          <Route  exact path='/trailer'  element={<Trailer/>} />
+
+          </Routes>
+   </div>
+   <Routes>
+    <Route exact path="/" render={()=>{
+      <div>
+        <AddMovie setNewMovie={setNewMovie} className="mt-3"/>
+        <MovieList movies={movies}/> 
+
+      </div>
+}}>
+      </Route> 
+   </Routes>
     </div>
+    
   );
 }
 
