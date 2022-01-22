@@ -1,7 +1,6 @@
 import React,{ useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Navbar  , Button , Form , FormControl} from 'react-bootstrap';
-import {Input} from 'semantic-ui-react'
 import MovieCard from './MovieCard';
 import {FaSearch} from 'react-icons/fa'
 import{AiOutlinePlus} from 'react-icons/ai'
@@ -11,8 +10,7 @@ import StarRatingComponent from 'react-star-rating-component';
 
 const MovieList = ({movies}) => {
     const [myInput , setMyInput]= useState("")
-    const styleObject = {color :"black", marginTop: 50 , marginLeft : 50 ,   display: "flex",flexDirection:"column",
-    flexWrap: "wrap"}
+    const styleObject = {color :"black", marginTop: 50  , display: "flex" }
     const styleBrand = {width : 90 , height : 50}
     return (
         <div >

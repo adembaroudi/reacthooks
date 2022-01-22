@@ -1,27 +1,26 @@
 import React from 'react'
-import {BrowserRouter as Router , 
- useHistory,
-  Link} from 'react-router-dom'
-  let history = useHistory();
-const trailer = (items) => {
+import {BrowserRouter as Router,
+  Link} from 'react-router-dom';
+  import {Button} from 'react-bootstrap';
+
+
+const trailer = () => {
     return (
         <div>
                       <br/>
-             <h1 style= {{color:'hotpink'}}> Description and the Trailer of the movie </h1>
+             <h1 className='text-primary'> Description and the Trailer of the movie </h1>
             
 
              <div>
-             <p style={{margin: '20px'}}> MIRAGE combines a murder thriller with a time-travel, alternate-universe story in which Vera (Adriana Ugarte), a happily married woman, moves into a new house with her husband, David (Alvaro Morte), and young daughter, Gloria (Luna Fulgencio). A nurse now, Vera left medical school to raise her daughter.</p>
-             <iframe width="727" height="409" src="https://www.youtube.com/embed/3NCOwTBWYdE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+             <p style={{margin: '20px'}}> Godzilla est un film de science-fiction américain réalisé par Gareth Edwards, sorti en 2014. Il s'agit d'un reboot de la série Godzilla, qui comprend trente films japonais réalisés entre 1954 et 2004, et marque le premier film prenant place dans le MonsterVerse, un univers partagé avec Kong: Skull Island (2017), Godzilla 2 : Roi des monstres (2019) et Godzilla vs. Kong (2021).</p>
+             <iframe width="727" height="409" src="https://www.youtube.com/embed/odM92ap8_c0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
              </div>
-             
+             <br/>
 
 
-
-           <button onClick={()=> history.push('/')}>
-              Go to home page
-          </button>
+             <Link to ="/home"> <Button variant="outline-primary"> Go to home page </Button></Link>
+        
         </div>
     )
 }

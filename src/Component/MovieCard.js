@@ -25,7 +25,7 @@ import MoviesData from './MoviesData';
   <Card.Title><MdOutlineDescription></MdOutlineDescription> description</Card.Title>
   {description}
   </Card.Text>
-  <Link to="/trailer"><Button variant="outline-info"> Trailer</Button></Link>
+  <Link to={`/trailer/${name}`}><Button variant="outline-info"> Trailer</Button></Link>
 </Card.Body>
 </Card>
 

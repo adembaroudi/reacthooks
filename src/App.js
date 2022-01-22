@@ -8,7 +8,8 @@ import './App.css';
   Route,Routes,
   Link} from 'react-router-dom';
   import Trailer from './Component/trailer';
- 
+  import TrailerGoal from './Component/TrailerGoal';
+ import TrailerSpider from './Component/TrailerSpider';
 
          
 const App = ({})=> {
@@ -24,21 +25,17 @@ useEffect(() => {
     <div className=" container App ">
 
    <div className='App'>    
+        
+        
    <Routes>
-
-          <Route  exact path='/trailer'  element={<Trailer/>} />
-
+          <Route  exact path='/trailer/Godzilla'  element={<Trailer/>} />
+          <Route  exact path='/trailer/Goal'  element={<TrailerGoal/>} />
+          <Route  exact path='/trailer/Spiderman'  element={<TrailerSpider/>} />
           </Routes>
    </div>
+  
    <Routes>
-    <Route exact path="/" render={()=>{
-      <div>
-        <AddMovie setNewMovie={setNewMovie} className="mt-3"/>
-        <MovieList movies={movies}/> 
-
-      </div>
-}}>
-      </Route> 
+     <Route exact path="/home" element={<MovieList movies={movies}/>}></Route>
    </Routes>
     </div>
     
