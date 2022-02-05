@@ -19,7 +19,7 @@ const trailer = () => {
              <br/>
 
 
-             <Link to ="/home"> <Button variant="outline-primary"> Go to home page </Button></Link>
+             <Link to ="/"> <Button variant="outline-primary"> Go to home page </Button></Link>
         
         </div>
     )

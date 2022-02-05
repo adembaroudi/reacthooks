@@ -35,7 +35,7 @@ useEffect(() => {
    </div>
   
    <Routes>
-     <Route exact path="/home" element={<MovieList movies={movies}/>}></Route>
+     <Route exact path="/" element={<MovieList movies={movies}/>}></Route>
    </Routes>
     </div>
     
